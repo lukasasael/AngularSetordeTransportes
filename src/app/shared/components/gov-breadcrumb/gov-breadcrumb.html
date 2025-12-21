@@ -1,0 +1,17 @@
+<nav class="gov-breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a routerLink="/">Início</a>
+    </li>
+
+    @for (item of items; track item.label; let last = $last) {
+    <li>
+      @if (last) {
+      <span>{{ item.label }}</span>
+      } @else {
+      <a [routerLink]="item.url">{{ item.label }}</a>
+      }
+    </li>
+    }
+  </ol>
+</nav>

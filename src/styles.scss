@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --gov-color-primary: #1351b4;
+  --gov-color-primary-dark: #0c326f;
+  --gov-color-text: #212529;
+  --gov-color-muted: #6c757d;
+  --gov-color-border: #dee2e6;
+  --gov-color-bg: #f8f9fa;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Rawline', 'Montserrat', Arial, sans-serif;
+  background-color: var(--gov-color-bg);
+  color: var(--gov-color-text);
+}
+
+a {
+  color: var(--gov-blue);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gov-card {
+  background: #fff;
+  border: 1px solid var(--gov-gray-300);
+  border-radius: 4px;
+  padding: 1rem;
+}

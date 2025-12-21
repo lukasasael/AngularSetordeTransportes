@@ -1,0 +1,15 @@
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .label {
+    font-size: 0.9rem;
+    color: var(--gov-gray-600);
+  }
+
+  .value {
+    font-size: 1.8rem;
+    color: var(--gov-blue);
+  }
+}

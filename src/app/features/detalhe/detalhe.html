@@ -1,0 +1,22 @@
+<app-gov-breadcrumb
+  [items]="[
+    { label: 'Consulta', url: '/consulta' },
+    { label: 'Detalhe' }
+  ]"
+></app-gov-breadcrumb>
+
+@if (record) {
+  <div class="gov-card details-card">
+    <h2>Motorista</h2>
+
+    <p>
+      <strong>Nome:</strong>
+      {{ record.driver.name }}
+    </p>
+
+    <p>
+      <strong>CPF:</strong>
+      {{ maskCpf(record.driver.cpf) }}
+    </p>
+  </div>
+}

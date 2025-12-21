@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+
+<app-gov-breadcrumb [items]="[{ label: 'Dashboard' }]"></app-gov-breadcrumb>
+
+<div class="kpi-grid">
+  @if (avgPrice$ | async; as avg) {
+  <app-kpi-card label="Preço Médio Nacional" [value]="'R$ ' + (avg | number : '1.2-2')">
+  </app-kpi-card>
+  } @if (totalLiters$ | async; as liters) {
+  <app-kpi-card label="Total de Litros Consumidos" [value]="(liters | number) || '0'">
+  </app-kpi-card>
+  } @if (stations$ | async; as stations) {
+  <app-kpi-card label="Postos Monitorados" [value]="stations"> </app-kpi-card>
+  }
+</div>
+<div class="kpi-grid">
+  <app-price-chart></app-price-chart>
+  <app-consumption-by-uf></app-consumption-by-uf>
+</div>
