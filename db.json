@@ -1,0 +1,232 @@
+{
+  "fuels": [
+    {
+      "id": 1,
+      "date": "2024-06-01",
+      "station": "Posto Central",
+      "city": "São Paulo",
+      "uf": "SP",
+      "fuelType": "Gasolina",
+      "pricePerLiter": 5.89,
+      "liters": 40,
+      "total": 235.6,
+      "driver": {
+        "name": "João Silva",
+        "cpf": "123.456.***-00"
+      },
+      "vehicle": {
+        "plate": "ABC-1A23",
+        "model": "Gol"
+      }
+    },
+    {
+      "id": 2,
+      "date": "2024-06-03",
+      "station": "Auto Posto Paulista",
+      "city": "Campinas",
+      "uf": "SP",
+      "fuelType": "Etanol",
+      "pricePerLiter": 3.79,
+      "liters": 35,
+      "total": 132.65,
+      "driver": {
+        "name": "Maria Souza",
+        "cpf": "234.567.***-11"
+      },
+      "vehicle": {
+        "plate": "DEF-2B34",
+        "model": "Onix"
+      }
+    },
+    {
+      "id": 3,
+      "date": "2024-06-05",
+      "station": "Posto Atlântico",
+      "city": "Rio de Janeiro",
+      "uf": "RJ",
+      "fuelType": "Diesel",
+      "pricePerLiter": 6.19,
+      "liters": 60,
+      "total": 371.4,
+      "driver": {
+        "name": "Carlos Pereira",
+        "cpf": "345.678.***-22"
+      },
+      "vehicle": {
+        "plate": "GHI-3C45",
+        "model": "Hilux"
+      }
+    },
+    {
+      "id": 4,
+      "date": "2024-06-07",
+      "station": "Posto Minas",
+      "city": "Belo Horizonte",
+      "uf": "MG",
+      "fuelType": "Gasolina",
+      "pricePerLiter": 5.75,
+      "liters": 42,
+      "total": 241.5,
+      "driver": {
+        "name": "Ana Ribeiro",
+        "cpf": "456.789.***-33"
+      },
+      "vehicle": {
+        "plate": "JKL-4D56",
+        "model": "HB20"
+      }
+    },
+    {
+      "id": 5,
+      "date": "2024-06-09",
+      "station": "Posto Sul",
+      "city": "Curitiba",
+      "uf": "PR",
+      "fuelType": "Diesel",
+      "pricePerLiter": 6.05,
+      "liters": 55,
+      "total": 332.75,
+      "driver": {
+        "name": "Rafael Lima",
+        "cpf": "567.890.***-44"
+      },
+      "vehicle": {
+        "plate": "MNO-5E67",
+        "model": "Ranger"
+      }
+    },
+    {
+      "id": 6,
+      "date": "2024-06-11",
+      "station": "Posto Leste",
+      "city": "Guarulhos",
+      "uf": "SP",
+      "fuelType": "Gasolina",
+      "pricePerLiter": 5.92,
+      "liters": 38,
+      "total": 224.96,
+      "driver": {
+        "name": "Bruno Santos",
+        "cpf": "678.901.***-55"
+      },
+      "vehicle": {
+        "plate": "PQR-6F78",
+        "model": "Argo"
+      }
+    },
+    {
+      "id": 7,
+      "date": "2024-06-13",
+      "station": "Posto Imperial",
+      "city": "Niterói",
+      "uf": "RJ",
+      "fuelType": "Etanol",
+      "pricePerLiter": 3.85,
+      "liters": 36,
+      "total": 138.6,
+      "driver": {
+        "name": "Fernanda Rocha",
+        "cpf": "789.012.***-66"
+      },
+      "vehicle": {
+        "plate": "STU-7G89",
+        "model": "Cronos"
+      }
+    },
+    {
+      "id": 8,
+      "date": "2024-06-15",
+      "station": "Posto Savassi",
+      "city": "Belo Horizonte",
+      "uf": "MG",
+      "fuelType": "Diesel",
+      "pricePerLiter": 6.22,
+      "liters": 70,
+      "total": 435.4,
+      "driver": {
+        "name": "Lucas Almeida",
+        "cpf": "890.123.***-77"
+      },
+      "vehicle": {
+        "plate": "VWX-8H90",
+        "model": "Sprinter"
+      }
+    },
+    {
+      "id": 9,
+      "date": "2024-06-17",
+      "station": "Posto Centro",
+      "city": "Santos",
+      "uf": "SP",
+      "fuelType": "Gasolina",
+      "pricePerLiter": 5.87,
+      "liters": 45,
+      "total": 264.15,
+      "driver": {
+        "name": "Paulo Nogueira",
+        "cpf": "901.234.***-88"
+      },
+      "vehicle": {
+        "plate": "YZA-9I01",
+        "model": "Logan"
+      }
+    },
+    {
+      "id": 10,
+      "date": "2024-06-19",
+      "station": "Posto Norte",
+      "city": "Manaus",
+      "uf": "AM",
+      "fuelType": "Diesel",
+      "pricePerLiter": 6.49,
+      "liters": 65,
+      "total": 421.85,
+      "driver": {
+        "name": "Diego Farias",
+        "cpf": "012.345.***-99"
+      },
+      "vehicle": {
+        "plate": "BCD-0J12",
+        "model": "Daily"
+      }
+    },
+    {
+      "id": 11,
+      "date": "2024-06-21",
+      "station": "Posto Atlântico",
+      "city": "Florianópolis",
+      "uf": "SC",
+      "fuelType": "Gasolina",
+      "pricePerLiter": 5.91,
+      "liters": 39,
+      "total": 230.49,
+      "driver": {
+        "name": "Thiago Moreira",
+        "cpf": "111.222.***-44"
+      },
+      "vehicle": {
+        "plate": "EFG-1K23",
+        "model": "208"
+      }
+    },
+    {
+      "id": 12,
+      "date": "2024-06-23",
+      "station": "Posto Vale",
+      "city": "São José dos Campos",
+      "uf": "SP",
+      "fuelType": "Etanol",
+      "pricePerLiter": 3.88,
+      "liters": 34,
+      "total": 131.92,
+      "driver": {
+        "name": "Juliana Martins",
+        "cpf": "222.333.***-55"
+      },
+      "vehicle": {
+        "plate": "HIJ-2L34",
+        "model": "Fiesta"
+      }
+    }
+  ]
+}

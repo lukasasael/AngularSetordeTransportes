@@ -5,18 +5,43 @@
   ]"
 ></app-gov-breadcrumb>
 
-@if (record) {
+@if (record$ | async; as record) {
+  <!-- ABASTECIMENTO -->
+  <div class="gov-card details-card">
+    <h2>Abastecimento</h2>
+
+    <p><strong>Data:</strong> {{ record.date }}</p>
+    <p><strong>Posto:</strong> {{ record.station }}</p>
+    <p><strong>Cidade/UF:</strong> {{ record.city }}/{{ record.uf }}</p>
+    <p><strong>Combustível:</strong> {{ record.fuelType }}</p>
+    <p><strong>Valor por litro:</strong> R$ {{ record.pricePerLiter | number:'1.2-2' }}</p>
+    <p><strong>Litros:</strong> {{ record.liters }}</p>
+    <p><strong>Total pago:</strong> R$ {{ record.total | number:'1.2-2' }}</p>
+  </div>
+
+  <!-- MOTORISTA -->
   <div class="gov-card details-card">
     <h2>Motorista</h2>
 
-    <p>
-      <strong>Nome:</strong>
-      {{ record.driver.name }}
-    </p>
+    <p><strong>Nome:</strong> {{ record.driver?.name }}</p>
+    <p><strong>CPF:</strong> {{ maskCpf(record.driver?.cpf) }}</p>
+  </div>
 
-    <p>
-      <strong>CPF:</strong>
-      {{ maskCpf(record.driver.cpf) }}
-    </p>
+  <!-- VEÍCULO -->
+  <div class="gov-card details-card">
+    <h2>Veículo</h2>
+
+    <p><strong>Placa:</strong> {{ record.vehicle?.plate }}</p>
+    <p><strong>Modelo:</strong> {{ record.vehicle?.model }}</p>
+  </div>
+
+  <div class="actions">
+    <button class="gov-button-primary" (click)="reportError(record.id)">
+      Reportar erro
+    </button>
+  </div>
+} @else {
+  <div class="gov-card">
+    <p>Carregando detalhes...</p>
   </div>
 }

@@ -1,17 +1,18 @@
 <section class="consulta-page">
   <h1>Consulta de Abastecimentos</h1>
 
+  <!-- Breadcrumb -->
   <app-gov-breadcrumb [items]="[{ label: 'Consulta' }]"></app-gov-breadcrumb>
 
   <!-- CARD: FILTROS -->
   <div class="gov-card filters-card">
     <h2 class="card-title">Filtros</h2>
 
-    <div class="filters">
+    <form class="filters" (ngSubmit)="applyFilter()">
       <!-- UF -->
       <div class="field">
-        <label>Estado (UF)</label>
-        <select [(ngModel)]="uf">
+        <label for="uf">Estado (UF)</label>
+        <select id="uf" [(ngModel)]="uf" name="uf">
           <option value="">Todos</option>
           @for (u of ufs; track u) {
           <option [value]="u">{{ u }}</option>
@@ -21,8 +22,8 @@
 
       <!-- Combustível -->
       <div class="field">
-        <label>Combustível</label>
-        <select [(ngModel)]="fuelType">
+        <label for="fuel">Combustível</label>
+        <select id="fuel" [(ngModel)]="fuelType" name="fuelType">
           <option value="">Todos</option>
           @for (f of fuelTypes; track f) {
           <option [value]="f">{{ f }}</option>
@@ -30,59 +31,69 @@
         </select>
       </div>
 
-      <!-- Botão Aplicar Filtros -->
+      <!-- Botão -->
       <div class="field actions">
-        <button type="button" class="gov-button-primary" (click)="applyFilter()">
-          Aplicar filtros
-        </button>
+        <button type="submit" class="gov-button-primary">Aplicar filtros</button>
       </div>
-    </div>
+    </form>
   </div>
 
   <!-- CARD: RESULTADOS -->
   <div class="gov-card results-card">
-    <h2 class="card-title">Resultados</h2>
+  <h2 class="card-title">Resultados</h2>
 
-    <table class="gov-table">
-      <thead>
-        <tr>
-          <th>Data</th>
-          <th>Posto</th>
-          <th>Cidade/UF</th>
-          <th>Combustível</th>
-          <th class="numeric">Valor/L</th>
-          <th class="numeric">Total</th>
-        </tr>
-      </thead>
+  <table class="gov-table">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Posto</th>
+        <th>Cidade/UF</th>
+        <th>Combustível</th>
+        <th class="numeric">Valor/L</th>
+        <th class="numeric">Total</th>
+      </tr>
+    </thead>
 
-      <tbody>
-        @for (r of pagedRecords; track r.id) {
+    <tbody>
+      @for (r of pagedRecords$ | async; track r.id) {
         <tr class="clickable-row" [routerLink]="['/detalhe', r.id]">
           <td>{{ r.date }}</td>
           <td>{{ r.station }}</td>
           <td>{{ r.city }}/{{ r.uf }}</td>
           <td>{{ r.fuelType }}</td>
-          <td class="numeric">R$ {{ r.pricePerLiter | number : '1.2-2' }}</td>
-          <td class="numeric">R$ {{ r.total | number : '1.2-2' }}</td>
+          <td class="numeric">
+            R$ {{ r.pricePerLiter | number:'1.2-2' }}
+          </td>
+          <td class="numeric">
+            R$ {{ r.total | number:'1.2-2' }}
+          </td>
         </tr>
-        }
-      </tbody>
-    </table>
+      }
+    </tbody>
+  </table>
 
-    <!-- PAGINAÇÃO -->
-    <div class="pagination">
-      <button (click)="currentPage = currentPage - 1; updatePage()" [disabled]="currentPage === 1">
-        Anterior
-      </button>
+  <div class="pagination">
+  <button
+    type="button"
+    (click)="prevPage()"
+    [disabled]="!(canGoPrev$ | async)"
+  >
+    Anterior
+  </button>
 
-      <span>Página {{ currentPage }}</span>
+  <span>
+    Página {{ currentPage$ | async }} de {{ totalPages$ | async }}
+  </span>
 
-      <button
-        (click)="currentPage = currentPage + 1; updatePage()"
-        [disabled]="currentPage * pageSize >= records.length"
-      >
-        Próximo
-      </button>
-    </div>
-  </div>
+  <button
+    type="button"
+    (click)="nextPage()"
+    [disabled]="!(canGoNext$ | async)"
+  >
+    Próximo
+  </button>
+</div>
+
+</div>
+
 </section>
