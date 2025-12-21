@@ -1,3 +1,6 @@
+Deploy:
+asdt2-6djx8c24b-lukasasaels-projects.vercel.app
+
 # Painel de Combustíveis – VLAB
 
 Frontend desenvolvido em Angular para visualização de dados de consumo e preço de combustíveis, seguindo o **Padrão Digital de Governo (DSGOV)**.
