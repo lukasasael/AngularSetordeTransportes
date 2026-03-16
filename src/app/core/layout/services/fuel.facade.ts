@@ -7,7 +7,7 @@ import { FuelRecord } from '../models/fuel.model';
   providedIn: 'root',
 })
 export class FuelFacade {
-  private readonly apiUrl = 'http://localhost:3000/fuels';
+  private readonly apiUrl = 'https://json-server-astd-1.onrender.com/fuels';
 
   constructor(private http: HttpClient) {}
 
