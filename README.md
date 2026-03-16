@@ -20,7 +20,8 @@ Criar um painel gerencial com foco em:
 ## 🏗️ Arquitetura
 - Componentes standalone
 - Facade Pattern para abstração de dados
-- Dados mockados diretamente no Facade
+- Dados vindos de API externa hosteada no render:
+  https://json-server-astd-1.onrender.com
 - Layout desacoplado das features
 
 ## 📊 Funcionalidades
