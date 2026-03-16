@@ -1,5 +1,5 @@
 Deploy:
-asdt2-6djx8c24b-lukasasaels-projects.vercel.app
+https://asdt2.vercel.app/
 
 # Painel de Combustíveis – VLAB
 
